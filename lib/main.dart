@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './splashscreen.dart';
 
 void main() {
   runApp(PropertyApp());
@@ -9,6 +10,10 @@ class PropertyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      // title: 'Property App',
+      // theme: ThemeData(primarySwatch: Colors.blue),
+      home: SplashScreen(),
+    );
   }
 }
