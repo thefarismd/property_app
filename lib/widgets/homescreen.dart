@@ -12,6 +12,18 @@ class HomeScreen extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
+      body: Card(
+          child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text('Discover',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+          Row(
+            children: const [Text('one'), Text('two')],
+          )
+        ],
+      )),
     );
   }
 }
