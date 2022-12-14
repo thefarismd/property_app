@@ -11,8 +11,10 @@ class PropertyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.white70,
+      ),
       // title: 'Property App',
-      // theme: ThemeData(primarySwatch: Colors.blue),
       home: SplashScreen(),
     );
   }

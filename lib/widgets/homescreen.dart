@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './discover.dart';
 
 class HomeScreen extends StatelessWidget {
   // const HomeScreen({Key key}) : super(key: key);
@@ -7,23 +8,23 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         title: const Text(
-          'An App Related To Property.',
-          style: TextStyle(color: Colors.white),
+          'Welcome',
+          style: TextStyle(
+            color: Colors.black,
+            fontFamily: 'robotobold',
+            fontSize: 28,
+          ),
         ),
       ),
-      body: Card(
+      body: Padding(
+          padding: const EdgeInsets.all(18.0),
           child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const Text('Discover',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-          Row(
-            children: const [Text('one'), Text('two')],
-          )
-        ],
-      )),
+            children: [
+              Discover(),
+            ],
+          )),
     );
   }
 }
