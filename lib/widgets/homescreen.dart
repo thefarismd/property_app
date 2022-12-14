@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:io' show Platform;
 import './discover.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,25 +8,44 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text(
-          'Welcome',
-          style: TextStyle(
-            color: Colors.black,
-            fontFamily: 'robotobold',
-            fontSize: 28,
-          ),
-        ),
-      ),
-      body: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Column(
-            children: [
-              Discover(),
-            ],
-          )),
-    );
+    return Platform.isAndroid
+        ? Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              title: const Text(
+                'Welcome',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontFamily: 'robotobold',
+                  fontSize: 28,
+                ),
+              ),
+            ),
+            body: Padding(
+                padding: const EdgeInsets.all(18.0),
+                child: Column(
+                  children: [
+                    Discover(),
+                  ],
+                )),
+          )
+        : CupertinoPageScaffold(
+            backgroundColor: Colors.white,
+            navigationBar: const CupertinoNavigationBar(
+              middle: Text(
+                'Welcome',
+                style: TextStyle(fontSize: 27, fontFamily: 'robotobold'),
+              ),
+            ),
+            child: SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.all(7.0),
+                child: Column(
+                  children: [
+                    Discover(),
+                  ],
+                ),
+              ),
+            ));
   }
 }

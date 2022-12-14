@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'dart:io' show Platform;
 import './widgets/splashscreen.dart';
 
 void main() {
@@ -10,12 +12,23 @@ class PropertyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.white70,
-      ),
-      // title: 'Property App',
-      home: SplashScreen(),
-    );
+    return Platform.isAndroid
+        ? MaterialApp(
+            debugShowCheckedModeBanner: false,
+            theme: ThemeData(
+              primaryColor: Colors.white70,
+            ),
+            // title: 'Property App',
+            home: SplashScreen(),
+          )
+        : CupertinoApp(
+            debugShowCheckedModeBanner: false,
+            theme: const CupertinoThemeData(
+              brightness: Brightness.light,
+              scaffoldBackgroundColor: Colors.white,
+              primaryColor: Colors.white,
+            ),
+            home: SplashScreen(),
+          );
   }
 }
