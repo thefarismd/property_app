@@ -13,7 +13,7 @@ class Discover extends StatelessWidget {
         const Text(
           'Discover',
           style: TextStyle(
-            fontFamily: 'robotobold',
+            fontFamily: 'opensans-bold',
             fontSize: 30,
           ),
         ),
@@ -24,6 +24,7 @@ class Discover extends StatelessWidget {
             children: [
               CPFGrant(),
               HDBLoan(),
+              CPFGrant(),
             ],
           ),
         )

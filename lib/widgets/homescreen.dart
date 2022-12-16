@@ -16,8 +16,8 @@ class HomeScreen extends StatelessWidget {
                 'Welcome',
                 style: TextStyle(
                   color: Colors.black,
-                  fontFamily: 'robotobold',
-                  fontSize: 28,
+                  fontFamily: 'opensans-bold',
+                  fontSize: 29,
                 ),
               ),
             ),
@@ -34,7 +34,7 @@ class HomeScreen extends StatelessWidget {
             navigationBar: const CupertinoNavigationBar(
               middle: Text(
                 'Welcome',
-                style: TextStyle(fontSize: 27, fontFamily: 'robotobold'),
+                style: TextStyle(fontSize: 29, fontFamily: 'opensans-bold'),
               ),
             ),
             child: SafeArea(

@@ -99,6 +99,10 @@ flutter:
       fonts:
         - asset: assets/fonts/Roboto-Bold.ttf
 
+    - family: opensans-bold
+      fonts:
+        - asset: assets/fonts/OpenSans-Bold.ttf
+
         # - asset: fonts/Schyler-Italic.ttf
         #   style: italic
   #   - family: Trajan Pro
