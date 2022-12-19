@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:property_app/widgets/slidercarousel.dart';
 import 'dart:io' show Platform;
-import './discover.dart';
+import 'widgets/discover.dart';
 
 class HomeScreen extends StatelessWidget {
   // const HomeScreen({Key key}) : super(key: key);
@@ -42,6 +43,7 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(7.0),
                 child: Column(
                   children: [
+                    SliderCarousel(),
                     Discover(),
                   ],
                 ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:property_app/cpfhousinggrant.dart';
 
 class CPFGrant extends StatelessWidget {
   // const MyWidget({Key key}) : super(key: key);
@@ -9,7 +10,8 @@ class CPFGrant extends StatelessWidget {
       // height: 300,
       width: 200,
       child: GestureDetector(
-        onTap: () {},
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(
+            builder: (BuildContext context) => CPFHousingGrant())),
         child: Card(
           elevation: 7,
           shape: const RoundedRectangleBorder(
