@@ -31,27 +31,33 @@ class HomeScreen extends StatelessWidget {
                 )),
           )
         : CupertinoPageScaffold(
-            backgroundColor: Colors.white,
-            navigationBar: const CupertinoNavigationBar(
-              middle: Text(
-                'Welcome',
-                style: TextStyle(fontSize: 29, fontFamily: 'opensans-bold'),
-              ),
-            ),
-            child: SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.all(7.0),
-                child: Column(
-                  children: [
-                    const SizedBox(
-                      height: 5,
-                    ),
-                    SliderCarousel(),
-                    const SizedBox(height: 5),
-                    Discover(),
-                  ],
+            backgroundColor: CupertinoColors.white,
+            child: CustomScrollView(
+              slivers: [
+                CupertinoSliverNavigationBar(
+                  backgroundColor: CupertinoColors.systemGrey.withOpacity(0.1),
+                  // border: Border.all(style: BorderStyle.none),
+                  largeTitle: const Text(
+                    'Welcome.',
+                    style: TextStyle(fontFamily: 'opensans-bold'),
+                  ),
                 ),
-              ),
+                SliverFillRemaining(
+                  child: Padding(
+                    padding: const EdgeInsets.all(7.0),
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 7,
+                        ),
+                        SliderCarousel(),
+                        const SizedBox(height: 5),
+                        Discover(),
+                      ],
+                    ),
+                  ),
+                )
+              ],
             ));
   }
 }
