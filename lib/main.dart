@@ -25,7 +25,6 @@ class PropertyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: const CupertinoThemeData(
               brightness: Brightness.light,
-              scaffoldBackgroundColor: Colors.white,
               primaryColor: Colors.white,
             ),
             home: SplashScreen(),

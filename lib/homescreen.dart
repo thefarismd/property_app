@@ -43,7 +43,11 @@ class HomeScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(7.0),
                 child: Column(
                   children: [
+                    const SizedBox(
+                      height: 5,
+                    ),
                     SliderCarousel(),
+                    const SizedBox(height: 5),
                     Discover(),
                   ],
                 ),

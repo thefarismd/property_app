@@ -17,6 +17,9 @@ class Discover extends StatelessWidget {
             fontSize: 30,
           ),
         ),
+        const SizedBox(
+          height: 5,
+        ),
         SizedBox(
           height: 265,
           child: ListView(
